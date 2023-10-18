@@ -1,0 +1,2 @@
+一个Animated Optical Illusion形式的小循环动画。首先在photoshop中制作核心的运动背景图片，再在processing中使用该图片作为背景，生成
+连续运动的矩形栅，即可看到连续运动的小猫效果。
