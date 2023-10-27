@@ -13,20 +13,17 @@ void setup()
   noFill(); 
   background(0); 
   stroke(255); 
-  frameRate(30);
-  //smooth(); 
+  frameRate(30); // 帧率为30
 } 
  
 void draw() 
 { 
-  for(int i=0; i<=width; i+=1) { 
-    float x = random(50,width);
-    float y = random(50,height - 50);
-    float r = random(50,500);
-    stroke(random(30,255),random(30,255),random(30,255));
-    strokeWeight(random(1,4));
-    ellipse(x, y, r, r); 
-    save("frame_"+frameCount+".png");
-    frameCount++;
-  }
-} 
+  float x = random(50,width);
+  float y = random(50,height - 50);
+  float r = random(50,500);
+  stroke(random(30,255),random(30,255),random(30,255));
+  strokeWeight(random(1,4));
+  ellipse(x, y, r, r); 
+
+  saveFrame("frame-######.png"); // 每一帧都保存一个图片
+}
