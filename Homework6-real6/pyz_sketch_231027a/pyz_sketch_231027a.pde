@@ -30,14 +30,9 @@ void draw() {
       float amt = noise(x * 0.01, y * 0.01, t);
       stroke(lerpColor(c1, c2, amt));
       
-      // 每个小椭圆的绘制方式：以中点为基点，绕x轴旋转一个角度
-      float x1 = x - cos(angle) * len / 2;
-      float y1 = y - sin(angle) * len / 2;
-      float x2 = x + cos(angle) * len / 2;
-      float y2 = y + sin(angle) * len / 2;
-      
+      // 每个小椭圆会旋转一定角度     
       pushMatrix();
-      translate((x1 + x2) / 2, (y1 + y2) / 2);
+      translate(x, y);
       rotate(angle);
       noFill();
       ellipse(0, 0, len, len / 2);
